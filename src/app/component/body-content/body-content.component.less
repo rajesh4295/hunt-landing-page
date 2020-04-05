@@ -1,0 +1,88 @@
+@import "../../../variables.less";
+
+.body-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .section-zero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        h5 {
+            color: @bright-pink;
+        }
+        .section-zero-one {
+            flex: 1;
+            
+            &.trust-us {
+                height: 400px;
+                background-image: url("../../../assets/images/pngbarn.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    .section-one {
+        flex-basis: 100%;
+        height: auto;
+        .services-text {
+            border-left: 10px solid @bright-pink;
+            padding: 5px;
+        }
+    }
+
+    .section-two {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        .section-two-one {
+            flex-basis: 30%;
+            & > h1 {
+                font-weight: bolder;
+                background: linear-gradient(to right, #7202bb 2%, #3264f5 82%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            & > p {
+                font-size: 14px;
+            }
+        }
+    }
+    .section-three {
+        flex: 100%;
+        text-align: center;
+        height: 800px;
+        background-image: url("../../../assets/images/pngwing.com.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+@media @mobile {
+    .body-content {
+        display: block;
+        .section-zero {
+            display: block;
+        }
+        .section-two {
+            display: block;
+        }
+    }
+}
+@media @tablet {
+    .body-content {
+        display: block;
+        .section-zero {
+            display: block;
+        }
+        .section-two {
+            display: block;
+        }
+    }
+}

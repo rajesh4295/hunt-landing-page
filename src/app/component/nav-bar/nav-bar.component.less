@@ -1,0 +1,28 @@
+@import "../../../variables.less";
+
+.navbar {
+    // background-color: @violet;
+    background: linear-gradient(to right, #7202bb 2%, #3264f5 82%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // position: absolute;
+    // width: 100%;
+    .navbar-brand {
+        border: 2px solid @bright-pink;
+    }
+    a {
+        color: @white;
+
+        &:hover {
+            color : @ligth-violet;
+        }
+    }
+    .collapse {
+        ul {
+            &>li {
+                .active {
+                    color : @ligth-violet;
+                }
+            }
+        }
+    }
+}

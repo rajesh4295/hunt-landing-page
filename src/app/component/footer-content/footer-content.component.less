@@ -1,0 +1,31 @@
+@import "../../../variables.less";
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: @grey;
+    flex-wrap: wrap;
+    & > i {
+        flex-basis: 50px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 50px;
+        font-size: 17px;
+        margin: 10px 5px;
+        border: 1px solid transparent;
+        &:hover {
+            background-color: @violet;
+            color: @white;
+        }
+    }
+    & > p {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 12px;
+        height: auto;
+    }
+}
