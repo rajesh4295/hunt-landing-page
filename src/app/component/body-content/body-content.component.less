@@ -16,12 +16,103 @@
         }
         .section-zero-one {
             flex: 1;
-            
+            flex-wrap: wrap;
             &.trust-us {
                 height: 400px;
                 background-image: url("../../../assets/images/pngbarn.png");
                 background-repeat: no-repeat;
                 background-size: contain;
+            }
+
+            &.company-numbers {
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                background-image: url("../../../assets/images/office.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                .bg-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    &.gradient-bg1 {
+                        background: linear-gradient(to right, #3264f5 2%,#7202bb 82%);
+                        &.opacity-8 {
+                            opacity: .8;
+                        }
+                    }
+                }
+
+                .numbers {
+                    color: @white;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    height: 100%;
+                    width: 100%;
+                    .number-row {
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        .number-col {
+                            flex: 1;
+
+                            h4 {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .carousel {
+                .carousel-indicators {
+                    .active{
+                        background-color: @violet;
+                    }
+                    :not(.active){
+                        background-color: @grey;
+                    }
+                }
+                .carousel-inner {
+                    text-align: center;
+                    .carousel-item {
+                        i {
+                            font-size: 32px;
+                            background: linear-gradient(to right, #7202bb 2%, #3264f5 82%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            display: block;
+                        }
+                        img {
+                            height: 100px;
+                            width: 100px;
+                            border-radius: 50px;
+                        }
+                        h4 {
+                            color: @bright-pink;
+                            font-weight: bold;
+                        }
+                        p.designation {
+                            font-size: 12px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                // .carousel-control-next-icon {
+                //     filter: invert(1);
+                // }
+                // .carousel-control-prev-icon {
+                //     filter: invert(1);
+                // }
             }
         }
     }
